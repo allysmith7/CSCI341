@@ -1,0 +1,53 @@
+Assemble: assembling /Users/cole/bin/git/CSCI 341/pullapart.s
+
+Assemble: operation completed successfully.
+
+Go: running pullapart.s
+
+
+Go: execution completed successfully.
+
+Go: running pullapart.s
+
+
+Go: execution completed successfully.
+
+Go: running pullapart.s
+
+
+Go: execution completed successfully.
+
+Go: running pullapart.s
+
+
+Go: execution completed successfully.
+
+Enter an integer: 37
+Sign bit is: 0
+Bytes are: 0 0 0 37 
+-- program is finished running --
+
+
+Reset: reset completed.
+
+Enter an integer: -109234500
+Sign bit is: 1
+Bytes are: 249 125 54 188 
+-- program is finished running --
+
+
+Reset: reset completed.
+
+Enter an integer: 169254
+Sign bit is: 0
+Bytes are: 0 2 149 38 
+-- program is finished running --
+
+
+Reset: reset completed.
+
+Enter an integer: -1
+Sign bit is: 1
+Bytes are: 255 255 255 255 
+-- program is finished running --
+

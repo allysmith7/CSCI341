@@ -1,0 +1,38 @@
+1. State your name, the course, the homework, and the date.
+
+	Cole Smith, CSCI 358, Pullapart (program 2A), 9/6/2020
+
+2. How long in total did you spend on the program (design, code, debug,
+	reporting)?
+
+	~2 hours
+	
+3. Discuss your approach to the problem: where did you begin, and what steps
+	did you take to complete the program? how did your approach change as you
+	worked through the problem? did code walk-through, the debugger, or some other
+	technique or tool help resolve issues?
+
+	First I started with finding how to use syscall to get user input, then I
+	wrote out the bits on paper and did the math to find how many bits to shift
+	to isolate each section that I wanted. Once I had done that, I typed out the
+	code required to do what I already had planned out.
+
+4. What help did you seek out beyond the course material, and did it help
+	resolve your problem?
+
+	I had an issue with printing integers, so I looked online for a list of MIPS
+	syscall codes, which showed me that you need a different number to print
+	integers than the number to print strings.
+
+5. What parts of your code could use improvement or disappointed you (what work
+	didn’t you get done, that more time would have enabled you to finish, or
+	what bugs did you not resolve)?
+	
+	I think that there may be a more concise way to print out the data, especially
+	the bytes line. This section of code was really long since I needed to print
+	the space inbetween each byte's value, so it became very long and hard to read
+
+6. Which part of your code are you the most pleased about?
+
+	I am pleased with the logic of isolating each byte. I think the fact that each
+	byte requires a right shift of 24 bits in the end is satisfying to see.

@@ -1,0 +1,14 @@
+Assemble: assembling /Users/cole/bin/git/CSCI341/HW2B/cafewall.s
+
+Assemble: operation completed successfully.
+
+Go: running cafewall.s
+
+
+Go: execution completed successfully.
+
+Enter the side length in px: 20
+Enter the number of pairs you want: 5
+
+-- program is finished running --
+

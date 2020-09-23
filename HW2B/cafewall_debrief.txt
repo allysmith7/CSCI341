@@ -1,0 +1,16 @@
+1.	Cole Smith, CSCI 341, Program 2B "Cafe Wall", 9/22/2020
+
+2. 	~3 hours
+
+3.	I began by reading over the instructions for the assignment in full, then reading the starter rectangle.s code.
+	From there, I modified the code to draw the square using only 1 size argument by copying size to a temporary register so it could still be scale appropriately.
+	After that, I create a procedure to draw a blue rectangle and then a procedure to draw the whole row.
+	Next I created the procedure to move down the bitmap display by adjusting the y offset, as well as adding the mortar.
+	After this, I created the branching in order to add the offset to every other row.
+	
+4.	I went to help hours on Tuesday afternoon in order to get some help on how to modify the code in rectangle.s to use one height parameter.
+
+5.	I think that my program functions correctly as it is, but I believe that there is most likely a better way to add
+	the offset to every other row that doesn't just use jumps.
+	
+6. I am pleased with how I used loops to draw each row, as well as move down to the next row. 
