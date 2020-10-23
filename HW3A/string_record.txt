@@ -1,0 +1,35 @@
+Assemble: assembling /Users/cole/bin/git/CSCI341/HW3A/string.s
+
+Assemble: operation completed successfully.
+
+Go: running string.s
+
+
+Go: execution completed successfully.
+
+Go: running string.s
+
+
+Go: execution completed successfully.
+
+Enter a string: The quick brown fox jumped over the lazy dog's back!
+The quick brown fox jumped over the lazy dog's back!
+Enter an integer: 3
+Wkh txlfn eurzq ira mxpshg ryhu wkh odcb grj'v edfn!
+Enter an integer: 89234
+89234
+
+-- program is finished running --
+
+
+Reset: reset completed.
+
+Enter a string: *What the =^_^= WANTS, the Human PROVIDES*
+*What the =^_^= WANTS, the Human PROVIDES*
+Enter an integer: 32
+*]ngz znk =^_^= ]GTZY, znk Nasgt VXU\OJKY*
+Enter an integer: 178A9
+-4
+
+-- program is finished running --
+

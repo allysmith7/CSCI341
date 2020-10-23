@@ -1,0 +1,31 @@
+1.	State your name, the course, the homework, and the date.
+
+	Cole Smith, CSCI 341, Homework 3A, 10/22/2020.
+
+2.	How long in total did you spend on the program (design, code, debug, reporting)?
+
+	3-4 hours all in.
+
+3.	Discuss your approach to the problem: where did you begin, and what steps did you take to complete the program? how did your approach change as you worked through the problem? did code walk-through, the debugger, or some other technique or tool help resolve issues?
+
+	I began by reading the entirety of the assignment to understand exactly what we were doing. Then I wrote my procedure for replace and tested it by writing some basic code in the main method.
+	Next, I wrote my atoi procedure and tested it with some basic values. Then, I worked on rotate by just writing it to shift the values and not loop around, then I added in the modulus to make
+	sure that I stayed within the alphabet. Once I was sure that they worked, I wrote out the main procedure as was specified in the instructions.
+
+4.	What help did you seek out beyond the course material, and did it help resolve your problem?
+
+	I looked at the resources linked in the assignment about ASCII values and mod in MIPS.
+
+5.	What parts of your code could use improvement or disappointed you (what work didn’t you get done, that more time would have enabled you to finish, or what bugs did you not resolve)?
+
+	I wasn't extremely happy with the efficiency of my code, I feel like there are better ways to do some of the calculations, but I was not able to think of any.
+	
+6.	Which part of your code are you the most pleased about?
+
+	I am pleased with how my atoi function works.
+
+7.	Discuss the testing done to ensure the procedures worked correctly.
+
+	I wrote out a form of test in the main procedure for each of the procedures we wrote to ensure they were working before I combined them all together. This included manually calculating values
+	to make sure my program was doing them correctly, then making sure the values were getting put in the correct registers, etc. Once this was done, I assembled it all together and tested it all
+	to make sure it still all was working.
