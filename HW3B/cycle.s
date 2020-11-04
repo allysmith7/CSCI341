@@ -17,11 +17,13 @@
 	.globl 	tostring
 
 main:
-	la		$a0, promptStr1		# prompt user
+	la		$a0, promptStr1		# prompt user for index 0
 	li		$v0, 4
 	syscall
 	li 		$v0, 5				# get input
 	syscall
+	
+	blt		$v0, 0, exit		# jumps if negative
 	sw		$v0, array			# store input
 	
 	
@@ -64,14 +66,73 @@ main:
 	
 	la		$a0, array			# puts array into $a0 for future calls
 	
-	jal		tostring			# prints array
+	jal		overhead				# prints array
 	
+	move	$s3, $v0
+exit:
 	li		$v0, 10
 	syscall
 	
 longest:
+	li		$s0, 5				# establishing counter
+	li		$v0, -214748364		# putting min value into $v0 for comparision
+	
+loopBackLongest:
+	# calculate address of new index
+	subi	$t1, $s0, 1
+	mul		$t2, $t1, 128
+	lw		$t0, array($t2)
+	
+	# compare current value to v0
+	bgt		$t0, $v0, newMax	# branch to set new max or loop to next
+	
+	subi	$s0, $s0, 1			# decrement counter
+	bne		$s0, 0, loopBackLongest		# loops back
+	jr		$ra
+	
+newMax:
+	lw		$v0, array($t2)		# set new max
+	
+	subi	$s0, $s0, 1			# decrement counter
+	bne		$s0, 0, loopBackLongest		# loop back
+	jr		$ra
+
+
+
+
 
 overhead:
+	subi	$sp, $sp, 4			# allocate space on stack for $a0
+	sw		$a0, ($sp)			# store $a0 on stack
+	
+	jal 	longest				# get longest value
+	
+	move	$t0, $v0			# stores longest in $t0
+	
+	lw		$a0, ($sp)			# retreive $a0 from stack
+	addi	$sp, $sp, 4			# deallocate stack space
+	
+	
+	# calculate sum of values in the array
+	li		$s0, 5				# initiating counter
+	li		$v0, 0				# sets return value to 0, to be added to
+
+loopBackOverhead:
+	# calculate address of new index
+	subi	$s0, $s0, 1
+	mul		$t2, $s0, 128
+	lw		$t3, array($t2)
+	
+	add		$v0, $v0, $t3		# adds new value on
+	
+	bne		$s0, 0, loopBackOverhead
+	
+	div		$v0, $v0, 5
+	
+	jr		$ra
+
+
+
 
 tostring:
 	la		$a0, bracketLeft	# prints left bracket
