@@ -1,0 +1,23 @@
+1.	Cole Smith, CSCI341, P3B, 11/4/2020
+
+2.	2 hours
+
+3.	I started by creating my main method and my tostring method, in order to
+	better understand how to access elements in the array. Then, I worked on
+	my longest procedure, which is needed for the overhead method. After
+	that, I worked on my overhead procedure with pseudocode first then
+	implemented it in MARS. I didn't really experience many issues with bugs
+	
+4.	I did not seek any outside help.
+
+5.	I am not extremely satisfied with how I did my overhead. It took me a lot
+	of instructions to calculate the average, which I think maybe could be
+	improved.
+
+6.	I am satisfied with the organization of my code. I think it is quite well
+	documented and easy to read, for MIPS at least.
+	
+7.	My code follows the calling conventions to my knowledge. When I call
+	overhead, I store $a0 and $ra so I can use them once it has run the
+	longest procedure. All of my other procedures are called from main so
+	nothing needed to be stored on the stack.

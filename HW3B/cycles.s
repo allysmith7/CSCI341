@@ -1,6 +1,8 @@
 .data
 	array: 			.space 	640			# allocates space for 5 words
 	
+	newline:		.asciiz	"\n"
+	
 	promptStr1:		.asciiz	"Enter the length of cycle 1: "
 	promptStr2:		.asciiz	"Enter the length of cycle 2: "
 	promptStr3:		.asciiz	"Enter the length of cycle 3: "
@@ -10,6 +12,10 @@
 	bracketLeft:	.asciiz "["
 	bracketRight:	.asciiz "]"
 	comma:			.asciiz ","
+	
+	longestCycle:	.asciiz	"Longest cycle is "
+
+	avgOverhead:	.asciiz	"Average overhead is "
 
 .text
 	.globl 	longest
@@ -66,9 +72,44 @@ main:
 	
 	la		$a0, array			# puts array into $a0 for future calls
 	
-	jal		overhead				# prints array
+	jal		tostring			# prints array
 	
-	move	$s3, $v0
+	la		$a0, newline		# prints newline
+	li		$v0, 4
+	syscall
+	
+	jal		longest				# finds longest, stored in $v0
+	move	$t0, $v0			# stores longest in $t0
+	
+	la		$a0, longestCycle	# prints longest cycle message
+	li		$v0, 4
+	syscall
+	
+	la		$a0, ($t0)			# prints longest value
+	li		$v0, 1
+	syscall
+	
+	la		$a0, newline		# prints newline
+	li		$v0, 4
+	syscall
+	
+	jal overhead				# calculates average overhead, stored in $v0
+	move	$t0, $v0			# stores average overhead in $t0
+	
+	la		$a0, avgOverhead	# prints average overhead message
+	li		$v0, 4
+	syscall
+	
+	la		$a0, ($t0)			# prints average overhead value
+	li		$v0, 1
+	syscall
+	
+	la		$a0, newline		# prints newline
+	li		$v0, 4
+	syscall
+	
+	j main
+	
 exit:
 	li		$v0, 10
 	syscall
@@ -102,15 +143,17 @@ newMax:
 
 
 overhead:
-	subi	$sp, $sp, 4			# allocate space on stack for $a0
+	subi	$sp, $sp, 8			# allocate space on stack for $a0, $ra
 	sw		$a0, ($sp)			# store $a0 on stack
+	sw		$ra, 4($sp)			# store $ra
 	
 	jal 	longest				# get longest value
 	
 	move	$t0, $v0			# stores longest in $t0
 	
 	lw		$a0, ($sp)			# retreive $a0 from stack
-	addi	$sp, $sp, 4			# deallocate stack space
+	lw		$ra, 4($sp)
+	addi	$sp, $sp, 8			# deallocate stack space
 	
 	
 	# calculate sum of values in the array
@@ -123,16 +166,15 @@ loopBackOverhead:
 	mul		$t2, $s0, 128
 	lw		$t3, array($t2)
 	
-	add		$v0, $v0, $t3		# adds new value on
+	sub		$t4, $t0, $t3
+	
+	add		$v0, $v0, $t4		# adds new value on
 	
 	bne		$s0, 0, loopBackOverhead
 	
 	div		$v0, $v0, 5
 	
 	jr		$ra
-
-
-
 
 tostring:
 	la		$a0, bracketLeft	# prints left bracket

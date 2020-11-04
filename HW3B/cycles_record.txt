@@ -1,0 +1,29 @@
+Assemble: assembling /Users/cole/bin/git/CSCI341/HW3B/cycle.s
+
+Assemble: operation completed successfully.
+
+Go: running cycle.s
+
+
+Go: execution completed successfully.
+
+Enter the length of cycle 1: 100
+Enter the length of cycle 2: 200
+Enter the length of cycle 3: 300
+Enter the length of cycle 4: 200
+Enter the length of cycle 5: 100
+[100,200,300,200,100]
+Longest cycle is 300
+Average overhead is 120
+Enter the length of cycle 1: 300
+Enter the length of cycle 2: 300
+Enter the length of cycle 3: 300
+Enter the length of cycle 4: 300
+Enter the length of cycle 5: 100
+[300,300,300,300,100]
+Longest cycle is 300
+Average overhead is 40
+Enter the length of cycle 1: -1
+
+-- program is finished running --
+
