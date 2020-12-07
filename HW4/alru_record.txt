@@ -1,0 +1,27 @@
+Assemble: assembling C:\Users\coles\Desktop\HW4\alru.s
+
+Assemble: operation completed successfully.
+
+Go: running alru.s
+
+
+Go: execution completed successfully.
+
+Initial state: 6
+0 1 3 2 
+Entry accessed: 3
+3 2 0 1 
+Entry accessed: 0
+0 1 3 2 
+Entry accessed: 1
+1 0 3 2 
+Entry accessed: 2
+2 3 1 0 
+Entry accessed: 1
+1 0 2 3 
+Entry accessed: 1
+1 0 2 3 
+Entry accessed: -1
+
+-- program is finished running --
+

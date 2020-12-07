@@ -1,0 +1,20 @@
+1.	Cole Smith, CSCI 341, 12/7/2020
+
+2.	2 hours
+
+3.	I began by working on a way to determine the initial state by using shifts
+	and masking to isolate bits and store them. Then, once that was working, I
+	worked on my printing method. Once that was complete, I implemented the
+	looping and the updating of the bits in memory.
+
+4.	None.
+
+5.	I feel like my code is very complete and I am satisfied with it. It isn't
+	pretty due to the large amount of branches, but I think it is fine.
+
+6.	I am pleased with how I did my printing. Although it is complicated to look
+	at from the start, it is fairly organized once you understand it.
+
+7.	I tested my code mainly by running it and manually checking using the
+	printed values that it was working correctly, as well as comparing to the
+	examples given.
