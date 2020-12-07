@@ -1,3 +1,8 @@
+# Cole Smith
+# CSCI 341
+# 9/6/2020
+# Program 2A
+# This program simulates approximate LRU of a cache
 .data
 	initial:	.asciiz		"Initial state: "
 	accessed:	.asciiz		"Entry accessed: "
